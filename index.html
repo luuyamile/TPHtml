@@ -4,77 +4,148 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>CompuQuality - Venta de productos de electrónica</title>
     <link rel="icon" type="image/ico" href="sources/logo-ico.ico"/>
+
 </head>
 <body>
     <header>
-        <!-- La etiqueta de párrafo la puse para poner algo resumido 
-            sobre lo que vendemos pero por el momento no se me ocurre nada.
-            y del H1 creo que también lo podríamos cambiar-->
-        <div class="company-info" id="intro">
-            <img src="/sources/Logo-name.png" alt="Logo de la compañía" class="header-logo">
-            <h1>Venta de productos de electrónica</h1>
-            <p></p>
+        <div class="contenedor">
+            <img style="height: 15%; width:15%" src="./sources/Logo-name2.png" alt="Logo de la compañía" class="header-logo">
+            
+            <input type="checkbox" id="menu-check">
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="contact-us" class="boton-invertido">Contáctanos</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- 
-            La idea de esta barra de navegación es que para el celular
-            sea tipo hamburguesa (pueden ver en youtube para saber a 
-            que me refiero)
-        -->    
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="intro">Inicio</a></li>
-                <li><a href="#">Novedades</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="contact-us">Contáctanos</a></li>
-            </ul>
-            <form action="#" class="search-bar">
-                <input type="text" id="prod-search" class="search-bar" placeholder="Buscar un producto">
-                <button type="button" id="confirm-search" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </nav>
     </header>
+
     <main>
-        <section class="news" id="news">
-            <h3>Las nuevas DDR5</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Perspiciatis officia iste provident quasi eveniet soluta, harum neque modi possimus dicta, odio consequatur magnam, quod maiores dolorum nobis debitis quis aperiam.</p>
-        </section>
-        <section class="products" id="products">
-            <div class="filter-options">
-                <button type="button">Reciente</button>
-                <button type="button">Más Vendido</button>
-                <form action="">
-                    <label for="product-sort">Ordenar precio:</label>
-                    <select name="ordenar-por" id="product-sort">
-                        <option value="minor-major">Menor a mayor</option>
-                        <option value="major-minor">Mayor a menor</option>
-                    </select>
-                </form>
+
+        <div class="contenedor">
+            <div>
+                <p class="eslogan">Los mejores precios</p>
+                <h2>Todo en celulares y computadoras</h2>
+                <p><a href="#" class="boton-principal">Compra ahora</a></p>
             </div>
+            <div>
+                <img src="./sources/imagen1.jpg" width="480">
+            </div>
+        </div>
+    </main>
+    <aside>
+        <div class="contenedor">
+           <!-- <section class="news" id="news">
+                <h3>Las nuevas DDR5</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Perspiciatis officia iste provident quasi eveniet soluta, harum neque modi possimus dicta, odio consequatur magnam, quod maiores dolorum nobis debitis quis aperiam.</p>
+            </section>
+            <section class="products" id="products">
+                <div class="filter-options">
+                    <button type="button">Reciente</button>
+                    <button type="button">Más Vendido</button>
+                    <form action="">
+                     <label for="product-sort">Ordenar precio:</label>
+                        <select name="ordenar-por" id="product-sort">
+                            <option value="minor-major">Menor a mayor</option>
+                            <option value="major-minor">Mayor a menor</option>
+                        </select>
+                    </form>
+                </div>
             <div class="products-list">
                 <!-- 
                     Aca faltaría maquetar las tarjetas de los productos
                 -->
             </div>
         </section>
-    </main>
+    </aside>
+    <aside id="reseñas">
+        <div class="contenedor">
+            <ul>
+                <li>
+                    <img src="./sources/personaje1.jpeg" width="480">
+
+                    <blockquote>En CompuQuality siempre resuelven todas mis dudas. Excelente equipo de trabajo</blockquote>
+                    <cite>- Ana de Villa Luro</cite>
+                </li>
+                <li>
+                    <img src="./sources/personaje2.jpeg" width="480">
+
+                    <blockquote>CompuQuality tiene los mejores precios siempre</blockquote>
+                    <cite>- Agustina de Almagro</cite>
+                </li>
+                <li>
+                    <img src="./sources/personaje3.jpeg" width="480">
+
+                    <blockquote>Hace 20 años que compró todos mis productos tecnologicos en CompuQuality, los mejores de Villa Crespo</blockquote>
+                    <cite>- Martin de Palermo </cite>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <aside id="contactanos">
+        <div class="contenedor">
+            <div>
+                <h2>Contactanos</h2>
+
+                <form id=form action="" class="form">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+
+                    <label for="message">Mensaje</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <!--<input type="submit" value="Enviar mensaje"> -->
+                    <button type="submit" class="boton-principal">Enviar mensaje</button>
+                </form>
+                <a href="mailto:lylezcano@gmail.com" id="contacta">mail</a>
+            </div>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2322.467289322399!2d-58.441155505535086!3d-34.592407977468824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1665878099527!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>    
+        </div>    
+    </aside>
     <footer>
-        <div class="footer-flex" id="contact-us">
-            <section class="footer-logo">
-                <img src="/sources/LogoSolo.png" alt="Logo de la compañía" class="logo-compania_pie">
-            </section>
-            <section id="contact-us_socialnet">
-                <a href="#"><i class="fa-brands fa-instagram"></i>compu_qualityCQ</a>
-                <a href="#"><i class="fa-brands fa-facebook"></i>CompuQuality</a>
-                <a href="#"><i class="fa-brands fa-twitter"></i>Compu_Quality02</a>
-            </section>
+        <div class="contenedor">
+            <div class="footer-flex" id="contact-us">
+                <section class="footer-logo">
+                </section>
+                <ul>
+                    <li></li><a href="#"><i class="fa-brands fa-instagram"></i>compu_qualityCQ</a>
+                    <li></li><a href="#"><i class="fa-brands fa-facebook"></i>CompuQuality</a>
+                    <li></li><a href="#"><i class="fa-brands fa-twitter"></i>Compu_Quality02</a>
+                </ul>
         </div>    
     </footer>
     <script src="https://kit.fontawesome.com/12094a1489.js" crossorigin="anonymous"></script>
+    <script>
+        const $form = document.querySelector('#form')
+        const $buttonMailto = document.querySelector('#contacta')
+
+        $form.addEventListener('submit', handleSubmit)
+
+        function handleSubmit (event) {
+            event.preventDefault()
+            const form = new FormData (this)
+            $buttonMailto.setAttribute('href', `mailto:lylezcano@gmail.com?subject=${form.get('name')}${form.get('email')}&body=${form.get('message')}`)
+            $buttonMailto.click()
+        }
+    </script>
 </body>
 </html>
